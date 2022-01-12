@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d2a48827-5880-4320-8b60-e31566df9ed6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design Patterns/Template Method Pattern/CreditCardPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Template Method Pattern/CreditCardPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design Patterns/Template Method Pattern/EWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Template Method Pattern/EWalletPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design Patterns/Template Method Pattern/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Template Method Pattern/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design Patterns/Template Method Pattern/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Template Method Pattern/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design Patterns/Template Method Pattern/CreditCardPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/TemplateMethodPattern/Code/CreditCardPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design Patterns/Template Method Pattern/EWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/TemplateMethodPattern/Code/EWalletPayment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design Patterns/Template Method Pattern/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design Patterns/Template Method Pattern/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/TemplateMethodPattern/Code/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Design-Patterns-in-Java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Design-Patterns-in-Java.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +45,8 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunManager" selected="Application.bro">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="Main_TemplateMethodPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main_TemplateMethodPattern" />
       <module name="Design-Patterns-in-Java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -70,7 +70,7 @@
       <list>
         <item itemvalue="Application.bro" />
         <item itemvalue="Application.bbb" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main_TemplateMethodPattern" />
       </list>
     </recent_temporary>
   </component>

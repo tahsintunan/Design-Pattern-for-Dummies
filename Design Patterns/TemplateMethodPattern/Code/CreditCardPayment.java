@@ -1,3 +1,4 @@
+package TemplateMethodPattern.Code;
 
 public class CreditCardPayment extends Payment {
 
@@ -10,6 +11,6 @@ public class CreditCardPayment extends Payment {
     @Override
     protected void executePayment() {
         // Here goes the code for executing payment with the Credit Card
-        System.out.println("Payment successfully completed with credit card.");
+        System.out.println("TemplateMethodPattern.Code.Payment successfully completed with credit card.");
     }
 }
