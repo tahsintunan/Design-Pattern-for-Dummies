@@ -46,3 +46,26 @@ public class Main {
     }
 }
 ```
+## ❇️ Step by Step Solution
+
+➡️ The simplest way to solve this problem would be to introduce a new field named `previousContentState` in the Editor class. So every time we try to update the `contentState`, it first stores the current `contentState` to `previousContentState` and then update the `contentState`. This way, if we try to ever undo the change, the `Editor` will return the `previousContentState`.
+```java
+public class Editor {
+    private String contentState;
+    private String previousContentState;
+
+    // setContentState first updates the previousContentState, then updates the contentState
+    public void setContentState(String contentState) {
+        this.previousContentState = this.contentState;
+        this.contentState = contentState; 
+    }
+    public String getContentState() { return contentState; }
+
+    // undo will return the previousContentState
+    public String undo() {
+        return this.previousContentState;
+    }
+}
+```
+
+
