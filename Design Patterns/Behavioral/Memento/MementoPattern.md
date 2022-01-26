@@ -167,7 +167,77 @@ public class Editor {
     }
 }
 ```
-➡️ 
+➡️ The above solution is a better solution, because it let's us undo multiple times without polluting the `Editor` class with lots of fields. However, this solution is violating a very important principle: Single-Responsibility principle. 
+To build maintainable software, we should design our classes in such a way that they have only one responsibility. In our case, our `Editor` class has two responsibilities. 
+1. Management of editor states (needed for undo mechanism)
+2. Providing other features we need from an editor. 
+
+A good way to separate state management from the `Editor` class would be to take state management outside from class `Editor` and put it somewhere else. We can create a new class for that job. Let's name that class `EditorStateManager`.
+```java
+public class EditorStateManager {
+    private final Stack<EditorState> previousEditorStates = new Stack<>();
+
+    // updates the stack with the last editorState
+    public void savePreviousState(EditorState editorState) {
+        this.previousEditorStates.push(editorState);
+    }
+
+    // takes out the last editorState from the stack and returns it
+    public EditorState getPreviousState() {
+        return this.previousEditorStates.pop();
+    }
+}
+```
+Now the `Editor` class should look like this:
+```java
+public class Editor {
+    private EditorState editorState;
+
+    public void setEditorState(EditorState editorState) {
+        this.editorState = editorState;
+    }
+    public EditorState getEditorState() { return editorState; }
+
+
+    public void undo(EditorStateManager editorStateManager) {
+        this.editorState = editorStateManager.getPreviousState();
+    }
+}
+```
+Now, we have successfully separated state management from the `Editor` class. Now let's see how our driver code (in `Main` class) would look like:
+```java
+public class Main {
+    public static void main(String[] args) {
+
+        var editor = new Editor();
+        var stateManager = new EditorStateManager();
+
+        editor.setEditorState(new EditorState("Content-1", "Title-1", "Arial", 12));
+
+        stateManager.savePreviousState(editor.getEditorState());
+        editor.setEditorState(new EditorState("Content-2", "Title-2", "Arial", 13));
+
+        stateManager.savePreviousState(editor.getEditorState());
+        editor.setEditorState(new EditorState("Content-3", "Title-3", "Arial", 14));
+
+        stateManager.savePreviousState(editor.getEditorState());
+        editor.setEditorState(new EditorState("Content-4", "Title-4", "Arial", 15));
+
+        stateManager.savePreviousState(editor.getEditorState());
+        editor.setEditorState(new EditorState("Content-5", "Title-5", "Arial", 16));
+
+
+        editor.undo(stateManager);
+        System.out.println(editor.getEditorState());    // gives us 4th editorState
+
+        editor.undo(stateManager);
+        editor.undo(stateManager);
+        editor.undo(stateManager);
+        System.out.println(editor.getEditorState());    // gives us 1st editorState
+    }
+}
+```
+###### _(In the driver code above, we could have eliminated repition and achieved a cleaner code by making another method that did both 1. State Management and 2. Setting EditorState, but that's outside of the scope of **Memento design pattern**)_
 ➡️ 
 ➡️ 
 ➡️ 
