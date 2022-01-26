@@ -1,4 +1,4 @@
-package Behavioral.Memento;
+package Behavioral.Memento.Code;
 
 public class EditorState {
     private String contentState;

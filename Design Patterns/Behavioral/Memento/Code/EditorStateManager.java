@@ -1,4 +1,4 @@
-package Behavioral.Memento;
+package Behavioral.Memento.Code;
 import java.util.Stack;
 
 public class EditorStateManager {
