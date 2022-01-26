@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2a48827-5880-4320-8b60-e31566df9ed6" name="Changes" comment="" />
+    <list default="true" id="d2a48827-5880-4320-8b60-e31566df9ed6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Design Patterns/Behavioral/Memento/Editor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/Memento/Code/Editor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design Patterns/Behavioral/Memento/EditorState.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/Memento/Code/EditorState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design Patterns/Behavioral/Memento/EditorStateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/Memento/Code/EditorStateManager.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
