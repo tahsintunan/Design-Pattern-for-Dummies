@@ -67,5 +67,31 @@ public class Editor {
     }
 }
 ```
+➡️ But this introduces a problem. In this way, we can undo only once. If we want to undo again, we will have no way of doing that. If we want to undo multiple times, we need a List, or even better, a Stack. Let's take a stack named `previousContentStates` in the `Editor` class and store previous content states in it when updating the content with `setContentState()` method. The `undo()` method will pop the last item from stach and set it to current `contentState`.
+```java
+public class Editor {
+    private String contentState;
+    private final Stack<String> previousContentStates = new Stack<>();
+
+    // first pushes the previousContentState to the stack, then updates the contentState
+    public void setContentState(String contentState) {
+        this.previousContentStates.push(this.contentState);
+        this.contentState = contentState;
+    }
+    public String getContentState() { return contentState; }
+
+    
+    // sets the contentState to the last previousContentState from stack
+    public void undo() {
+        this.contentState = this.previousContentStates.pop();
+    }
+}
+```
+➡️ 
+➡️ 
+➡️ 
+➡️ 
+➡️ 
+➡️ 
 
 
