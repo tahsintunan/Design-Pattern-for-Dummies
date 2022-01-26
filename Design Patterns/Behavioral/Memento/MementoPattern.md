@@ -87,7 +87,86 @@ public class Editor {
     }
 }
 ```
-➡️ 
+➡️ Now, let's consider a possibility. What if some time in the future, we decide to indroduce new fields to our content state? Maybe we'd like to have our doc a title, a font, a fontsize, and we would like to undo all of them. Let's introduce these new fields in our `Editor` class and see how it goes:
+```java
+public class Editor {
+    private String contentState;
+    private final Stack<String> previousContentStates = new Stack<>();
+    private String title;
+    private final Stack<String> previousTitles = new Stack<>();
+    private String fontName;
+    private final Stack<String> previousFontNames = new Stack<>();
+    private double fontSize;
+    private final Stack<Double> previousFontSizes = new Stack<>();
+
+
+    public void setContentState(String contentState, String title, String fontName, double fontSize) {
+        this.previousContentStates.push(this.contentState);
+        this.previousTitles.push(this.title);
+        this.previousFontNames.push(this.fontName);
+        this.previousFontSizes.push(this.fontSize);
+
+        this.contentState = contentState;
+        this.title = title;
+        this.fontName = fontName;
+        this.fontSize  =fontSize;
+    }
+
+    public String getContentState() { return contentState; }
+    public String getTitle() { return title; }
+    public String getFontName() { return fontName; }
+    public double getFontSize() { return fontSize; }
+
+
+    public void undo() {
+        this.contentState = this.previousContentStates.pop();
+        this.title = this.previousTitles.pop();
+        this.fontName = this.previousFontNames.pop();
+        this.fontSize = this.previousFontSizes.pop();
+    }
+}
+```
+This seems to be a huge problem. Just by adding 3 additional fields, we have made the class bloated. We had to made additional stacks for each of them. Our `setContentState()` method became bloated with all those fields. We had to create additional getters for all of them. Our `undo()` method also got bigger. 
+Now imagine if we were to introduce 30 different fields instead of 3! The class would become so big that readability would be hindered, it would be harder for us to debug and maintain. It wouldn't be extensible anymore. Long story short, it violates the SOLID principles.
+So, it'd be in our best interest to create a separate class that holds all the necessary fields. This will make our code readable, scalable and modular. Let's call this class `EditorState`. 
+```java
+public class EditorState {
+    private String contentState;
+    private String title;
+    private String fontName;
+    private double fontSize;
+
+    public EditorState(String contentState, String title, String fontName, double fontSize) {
+        this.contentState = contentState;
+        this.title = title;
+        this.fontName = fontName;
+        this.fontSize = fontSize;
+    }
+
+    public String getContentState() {return contentState;}
+    public String getTitle() {return title;}
+    public String getFontName() {return fontName;}
+    public double getFontSize() {return fontSize;}
+}
+```
+The `Editor` class will now look like this:
+```java
+public class Editor {
+
+    private EditorState editorState;
+    private final Stack<EditorState> previousEditorStates = new Stack<>();
+
+    public void setEditorState(EditorState editorState) {
+        this.previousEditorStates.push(this.editorState);
+        this.editorState = editorState;
+    }
+    public EditorState getEditorState() { return editorState; }
+
+    public void undo() {
+        this.editorState = this.previousEditorStates.pop();
+    }
+}
+```
 ➡️ 
 ➡️ 
 ➡️ 
