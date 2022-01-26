@@ -238,9 +238,12 @@ public class Main {
 }
 ```
 ###### _(In the driver code above, we could have eliminated repition and achieved a cleaner code by making another method that did both 1. State Management and 2. Setting EditorState, but that's outside of the scope of **Memento design pattern**)_
-➡️ 
-➡️ 
-➡️ 
-➡️ 
 
 
+## Final Solution
+In our representation of the **Memento pattern** above, the `Editor`, `EditorState`, and `EditorStateManager` classes are the three main actors. In the original Gang of Four book, they call these classes `Originator`, `Memento`, and `Caretaker` respectively. 
+- `Memento` contains state of an object to be restored
+- `Originator` creates and stores states in Memento objects
+- `Caretaker` object is responsible to restore object state from Memento
+
+Final solution code can be found [here](https://github.com/TahsinTunan/Design-Patterns-in-Java/tree/main/Design%20Patterns/Behavioral/Memento/Code)
