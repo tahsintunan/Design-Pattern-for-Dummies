@@ -248,4 +248,4 @@ In our representation of the **Memento pattern** above, the `Editor`, `EditorSta
 
 The Memento makes the object itself responsible for creating a snapshot of its state. No other object can read the snapshot, making the original object’s state data safe and secure.
 
-Final solution code can be found [here](https://github.com/TahsinTunan/Design-Patterns-in-Java/tree/main/Design%20Patterns/Behavioral/Memento/Code)
+Final solution code can be found ➡️ [here](https://github.com/TahsinTunan/Design-Patterns-in-Java/tree/main/Design%20Patterns/Behavioral/Memento/Code)
