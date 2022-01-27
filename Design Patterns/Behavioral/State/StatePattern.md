@@ -154,3 +154,12 @@ If we were to apply the state pattern in this stopwatch, that'd be bad design fo
 2. Applying state pattern will introduce lots of moving parts (i.e. lots of classes, interfaces, callbacks and overall scattered codebase) in the code, will hinder readability (and maintainability) instead of improving it.
 3. By overengineering the solution, we introduced new problems instead of solving one.
 
+
+## ❇️ Final Solution
+Our dummy MS Paint now implemets the **state pattern** and addresses all future extensibility issues as well as making the code readable. 
+
+
+In our example, we have the `Canvas` and the `Tool` as the main parts that constitute the state pattern. If we look at the classic definition of the state pattern in the original Gang of four book, we will see different (and more general) names of the class. According to that, our `Canvas` class would be called `Context`, while `Tool` would be called `State`. the `State` will have one (or many) `handle()` methods. Then we'll have `ConcreteClassA`, `ConcreteClassB`, and so on which will have the concrete implementations of the `State`. The `Context` will have one (or many) `request()` methods that will delegate tasks to the `State`'s `handle()` method.
+
+
+Final solution code can be found [here](https://github.com/TahsinTunan/Design-Patterns-in-Java/tree/main/Design%20Patterns/Behavioral/State/Code)
