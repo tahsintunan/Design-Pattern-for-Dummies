@@ -58,3 +58,40 @@ Our current approach has the following problems:
 3. Violates the **Open-Closed principle**. If we want to add new tools, we'll have to modify our existing code again and again. 
 
 ###### _(N.B. In our `Canvas` class, we're just printing out various things when `onMouseClick()` method is called for demonstration purposes. In real life, they'd contain real functionalities.)_
+
+
+## ❇️ Step by Step Solution
+➡️ Our `onMouseClick()` method in the `Canvas` class currently has all the tool functionalities as concrete implementations. To remove all the tool functionalities from this `onMouseClick()` method, we will need abstract implementation of the functionalities. For that, we can create an **abstract class** or an **interface** named `Tool`, which will have the abstract implementation of the method `onMouseClick()`. Deriving from `Tool`, we'll have our actual tools separated in different classes, each having their own implementation of that method. Let's see this in code:
+```java
+public interface Tool {
+    public void onMouseClick();
+}
+```
+```java
+public class Pencil implements Tool {
+    @Override
+    public void onMouseClick() {
+        // functionality of pencil tool
+        System.out.println("Draw with pencil");
+    }
+}
+
+public class Eraser implements Tool {
+    @Override
+    public void onMouseClick() {
+        // functionality of eraser tool
+        System.out.println("Erase with eraser");
+    }
+}
+
+public class ColorPicker implements Tool {
+    @Override
+    public void onMouseClick() {
+        // functionality of color picker tool
+        System.out.println("Pick color with color picker");
+    }
+}
+```
+###### _(N.B. We could have used an abstract class instead of an interface as well. But since we have no common functionalities among the tools in this example, an interface makes more sense.)_
+
+
