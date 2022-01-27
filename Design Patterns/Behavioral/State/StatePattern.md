@@ -125,3 +125,32 @@ public class Main {
 }
 ```
 
+
+## ❇️ Potential abuse of state pattern
+Applying the state pattern can be overkill **if a state machine has only a few states or rarely changes**. For example, let's think of an stopwatch which has only two states: 
+1. On
+2. Off
+
+Now, the stopwatch has a switch. The switch toggles the state of the watch (If it's on, it becomes off, and vice verca).
+An easy and clean approach would be the following:
+```java
+public class Stopwatch {
+    private boolean isOff = true;
+
+    public void toggleState() {
+        if (isOff) {
+            isOff = false;
+            System.out.println("Stopwatch switched on");
+        }
+        else {
+            isOff = true;
+            System.out.println("Stopwatch switched off");
+        }
+    }
+}
+```
+If we were to apply the state pattern in this stopwatch, that'd be bad design for the following reasons:
+1. The stopwatch will always have only two states, so extensibility is unimportant here.
+2. Applying state pattern will introduce lots of moving parts (i.e. lots of classes, interfaces, callbacks and overall scattered codebase) in the code, will hinder readability (and maintainability) instead of improving it.
+3. By overengineering the solution, we introduced new problems instead of solving one.
+
