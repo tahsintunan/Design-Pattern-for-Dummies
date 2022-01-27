@@ -33,9 +33,9 @@
   * Interpreter
   * Iterator
   * Mediator
-  * Memento
+  * [Memento](https://github.com/TahsinTunan/Design-Patterns-in-Java/blob/main/Design%20Patterns/Behavioral/Memento/MementoPattern.md)
   * Observer
-  * State
+  * [State](https://github.com/TahsinTunan/Design-Patterns-in-Java/blob/main/Design%20Patterns/Behavioral/State/StatePattern.md)
   * Strategy
   * Template Method
   * Visitor
