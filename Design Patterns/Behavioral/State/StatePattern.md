@@ -94,4 +94,19 @@ public class ColorPicker implements Tool {
 ```
 ###### _(N.B. We could have used an abstract class instead of an interface as well. But since we have no common functionalities among the tools in this example, an interface makes more sense.)_
 
+➡️ Now that we have separated concrete implementations in different classes, we can have abstract implementations in the `Canvas` class. 
+```java
+public class Canvas {
+    private Tool currentTool;
+
+    public Tool getCurrentTool() { return currentTool; }
+    public void setCurrentTool(Tool currentTool) { this.currentTool = currentTool; }
+
+    // onMouseClick() of Canvas delegates the task to the onMouseClick() of Tool
+    public void onMouseClick() {
+        currentTool.onMouseClick();
+    }
+}
+```
+Note that the `onMouseClick()` method of the canvas class is different from the `onMouseClick()` method of the tools. The first one merely delegates the task to the later one. 
 
