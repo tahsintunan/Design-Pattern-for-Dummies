@@ -110,3 +110,18 @@ public class Canvas {
 ```
 Note that the `onMouseClick()` method of the canvas class is different from the `onMouseClick()` method of the tools. The first one merely delegates the task to the later one. 
 
+➡️ We have successfully implemented the **State** pattern. Our driver code will now look like this:
+```java
+public class Main {
+    public static void main(String[] args) {
+        var canvas = new Canvas();
+
+        canvas.setCurrentTool(new ColorPicker());
+        canvas.onMouseClick();  // prints "Pick color with color picker"
+
+        canvas.setCurrentTool(new Eraser());
+        canvas.onMouseClick();  // prints "Erase with eraser"
+    }
+}
+```
+
