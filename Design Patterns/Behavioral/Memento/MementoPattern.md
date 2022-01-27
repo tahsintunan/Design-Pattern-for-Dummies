@@ -1,7 +1,7 @@
 # Memento Design Pattern
 
 ## ❇️ Description:
-**Memento** pattern is used to restore state of an object to a previous state. Memento pattern falls under **behavioral** pattern category. This pattern is usually used to implement **undo** mechanism. Meeaning, if we want our software to have the ability to return back to it's previous state, **Memento** pattern is the way to go. 
+Memento is a design pattern that lets us save and restore the previous state of an object without revealing the details of its implementation. It falls under **behavioral** pattern category. This pattern is usually used to implement **undo** mechanism. Meeaning, if we want our software to have the ability to return back to it's previous state, **Memento** pattern is the way to go. 
 
 ## ❇️ Problem
 Let's think of a scenerio where we're building a text editor software and we want to implement the undo mechanism in it. 
@@ -245,5 +245,7 @@ In our representation of the **Memento pattern** above, the `Editor`, `EditorSta
 - `Memento` contains state of an object to be restored
 - `Originator` creates and stores states in Memento objects
 - `Caretaker` object is responsible to restore object state from Memento
+
+The Memento makes the object itself responsible for creating a snapshot of its state. No other object can read the snapshot, making the original object’s state data safe and secure.
 
 Final solution code can be found [here](https://github.com/TahsinTunan/Design-Patterns-in-Java/tree/main/Design%20Patterns/Behavioral/Memento/Code)
