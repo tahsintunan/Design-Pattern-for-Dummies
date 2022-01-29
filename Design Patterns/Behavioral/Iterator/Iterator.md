@@ -137,3 +137,48 @@ public class Friendlist {
 ```
 _N.B. The reason we created a nested class `FriendlistIterator` inside the `Friendlist` class is that we need to have access to it's internal representation (in this case, the `friendCount` field)_ 
 
+➡️ We still cannot use the `FriendlistIterator` in the driver code because we need to provide our driver code with an instance of this class. We can achieve that with a method that returns a `FriendlistIterator` object. We'll call this method `createIterator()`. Also, we'll always need this method regardless of what internal datastructure we're using, so it'd be wise to create an interface `IterableCollection` which will be implemented in the class that holds our data (in this case, the `Friendlist` class). 
+So, let's create the `createIterator()` interface and implement it inside our `Friendlist` class:
+```java
+public interface IterableCollection {
+    public Iterator createIterator();
+}
+```
+```java
+public class Friendlist implements IterableCollection {
+    private String[] friends = new String[100];
+    private int friendCount = 0;
+    
+    public void addFriend(String friend) {
+        this.friends[this.friendCount] = friend;
+        this.friendCount++;
+    }
+
+    // Implementation of Iterator interface
+    @Override
+    public Iterator createIterator() {
+        return new FriendlistIterator();
+    }
+
+    private class FriendlistIterator implements Iterator {
+        private int position = 0;
+
+        @Override
+        public boolean hasNext() {
+            return (position < friendCount);
+        }
+
+        @Override
+        public Object next() {
+            if (this.hasNext()) {
+                return friends[position++];
+            }
+            else {
+                return null;
+            }
+        }
+    }
+}
+}
+```
+
