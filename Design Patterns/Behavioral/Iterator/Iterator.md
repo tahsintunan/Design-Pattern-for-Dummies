@@ -182,3 +182,22 @@ public class Friendlist implements IterableCollection {
 }
 ```
 
+➡️ Now, we can iterate over this iterable object `Friendlist` without knowing it's internal representation.
+```java
+public class Main {
+    public static void main(String[] args) {
+        var friendlist = new Friendlist();
+
+        friendlist.addFriend("John");
+        friendlist.addFriend("Mark");
+        friendlist.addFriend("Zucc");
+
+        // instantiating an iterator and iterating with it
+        var iterator = friendlist.createIterator();
+        while(iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+    }
+}
+```
