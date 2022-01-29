@@ -84,3 +84,22 @@ We are now faced with a problem. The change we made inside a class affected our 
 _N.B. Since we're working with the iterator pattern, **our main focus will be on just the iteration of the friendlist**. The other functionalities of `Friendlist` (like adding friends) are not the primary concern of the iterator pattern._ 
 
 
+
+## ❇️ Step by Step Solution
+
+➡️ If we look at our example where we had a fixed size array storing our data, we will see that we needed the `friendCount` variable in order to iterate. But in our implementation with arrayList, we didn't need it. So, our driver code (in the `Main` class) should not use the `friendCount` (or anything that is implementation specific) directly, neither should it know about it's existence. It has to be contained in the internal implementation only. 
+
+On the other hand, we need some methods that will be common regardless of the internal implementation, and thus, available to the driver code. We can achieve this with 2 methods:
+1. `hasNext():` tells us whether we've anything left in the iterable object to iterate over _(returns a boolean)_
+2. `next()`: gives us the next element and goes forward _(returns the element)_
+
+No matter what sort of iterator we make, these 2 methods will always have to exist for us to iterate over an iterable object. So we can create an interface `Iterator`.
+```java
+public interface Iterator {
+    public boolean hasNext();
+    public Object next();
+}
+```
+
+_N.B. `next()` returns an Object type because in future if we change the internal datastructure of the iterable object, we'll still be able to use this interface._
+
