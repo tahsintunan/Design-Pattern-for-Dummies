@@ -31,7 +31,7 @@
   * Chain of Responsibility
   * Command
   * Interpreter
-  * Iterator
+  * [Iterator](https://github.com/TahsinTunan/Design-Patterns-in-Java/blob/main/Design%20Patterns/Behavioral/Iterator/Iterator.md)
   * Mediator
   * [Memento](https://github.com/TahsinTunan/Design-Patterns-in-Java/blob/main/Design%20Patterns/Behavioral/Memento/MementoPattern.md)
   * Observer
