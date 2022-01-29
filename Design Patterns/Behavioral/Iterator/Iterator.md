@@ -201,3 +201,50 @@ public class Main {
     }
 }
 ```
+
+## ❇️ Benefit of Iterator Pattern
+Now that we've used the Iterator pattern in our code, let's go back to our problem. If we want to shift from fixed size array to an arrayList, we'll have to modify the contents of the `Friendlist` class:
+```java
+public class Friendlist implements IterableCollection {
+    private ArrayList<String> friends = new ArrayList<String>();
+
+    public void addFriend(String friend) {
+        this.friends.add(friend);
+    }
+
+    // Implementation of Iterator interface
+    @Override
+    public Iterator createIterator() {
+        return new FriendlistIterator();
+    }
+
+    // Concrete implementation of the iterator
+    private class FriendlistIterator implements Iterator {
+        private int position = 0;
+
+        @Override
+        public boolean hasNext() {
+            return (position < friends.size());
+        }
+
+        @Override
+        public Object next() {
+            if (this.hasNext()) {
+                return friends.get(position++);
+            }
+            else {
+                return null;
+            }
+        }
+    }
+}
+```
+After making the changes, our code in the `Main` class will run smoothly as intended. Because of the fact that we used the iterator pattern, the change we made inside the `Friendlist` class had no impact outside the class. Therefore, in a large-scale software, our codebase will be easily extendable and scalable and will not have any unintended consequence throughout the whole codebase. 
+
+
+## ❇️ Final Solution
+In our representation of the **Iterator pattern** above, we achieved modularity and scalibility by hiding our implementation details from the client (or anyone outside the class). We did this by abstracting the implementation outside the class.  
+- `Iterator` interface contains the necessary methods for us to iterate over an iterable object. We can implement this interface to create various kinds of iterators with different implementations.
+- `IterableCollection` is what contains our iterable data. It also does the job of creating an Iterator object.
+
+Final solution code can be found ➡️ [here](https://github.com/TahsinTunan/Design-Patterns-in-Java/tree/main/Design%20Patterns/Behavioral/Iterator/Code)
