@@ -103,3 +103,37 @@ public interface Iterator {
 
 _N.B. `next()` returns an Object type because in future if we change the internal datastructure of the iterable object, we'll still be able to use this interface._
 
+➡️ Let's implement the `Iterator` interface inside the `Friendlist` class:
+```java
+public class Friendlist {
+    private String[] friends = new String[100];
+    private int friendCount = 0;;
+
+    public void addFriend(String friend) {
+        this.friends[this.friendCount] = friend;
+        this.friendCount++;
+    }
+
+    // this class contains the concrete implementation of the iteration logic
+    private class FriendlistIterator implements Iterator {
+        private int position = 0;
+        
+        @Override
+        public boolean hasNext() {
+            return (position < friendCount);
+        }
+
+        @Override
+        public Object next() {
+            if (this.hasNext()) {
+                return friends[position++];
+            }
+            else {
+                return null;
+            }
+        }
+    }
+}
+```
+_N.B. The reason we created a nested class `FriendlistIterator` inside the `Friendlist` class is that we need to have access to it's internal representation (in this case, the `friendCount` field)_ 
+
