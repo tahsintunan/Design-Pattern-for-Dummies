@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d2a48827-5880-4320-8b60-e31566df9ed6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design Patterns/TemplateMethodPattern/Code/CreditCardPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/TemplateMethod/Code/CreditCardPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design Patterns/TemplateMethodPattern/Code/EWalletPayment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/TemplateMethod/Code/EWalletPayment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design Patterns/TemplateMethodPattern/Code/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/TemplateMethod/Code/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design Patterns/TemplateMethodPattern/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design Patterns/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +13,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -65,8 +62,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main_TemplateMethodPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main_TemplateMethodPattern" />
+    <configuration name="MainTemplateMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainTemplateMethod" />
       <module name="Design-Patterns-in-Java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -89,10 +86,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.MainTemplateMethod" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.bro" />
         <item itemvalue="Application.bbb" />
-        <item itemvalue="Application.Main_TemplateMethodPattern" />
       </list>
     </recent_temporary>
   </component>
