@@ -155,4 +155,10 @@ public class Main {
 ```
 
 
+## ❇️ Final Solution
+We have separated functionality logic for different payment modes from our `Payment` class to adhere to the SOLID principles. Now adding a new payment mode to our codebase is just a matter of creating a child class of `Payment` class and implementing the methods. Thus, our code is now easier to maintain and extend.
 
+This pattern is called **Template Method** pattern because we have outlined a template of a method (in this case, the `makePayment()` method) in the parent abstract class, and implemented it's internal details in the child classes.
+
+
+Final solution code can be found ➡️ [here](https://github.com/TahsinTunan/Design-Patterns-in-Java/tree/main/Design%20Patterns/Behavioral/TemplateMethod/Code)
