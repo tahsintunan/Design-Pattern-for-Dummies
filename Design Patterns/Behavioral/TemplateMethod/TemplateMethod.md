@@ -88,3 +88,71 @@ Our current approach has the following problems:
 2. Violates the **Open-Closed principle**. If we want to add new payment modes, we'll have to modify our existing code again and again. 
 
 ###### _(N.B. In our `Payment` class, we're just printing out various things when the methods are run for demonstration purposes. In real life, they'd contain real functionalities.)_
+
+
+## ❇️ Step by Step Solution
+➡️ We could achieve better, cleaner, and scalable code by separating the payment modes as different classes and making the `makePayment()` method a "template" method, that executes all the necessary methods for payment. For that, we can make our `Payment` class an abstract class that contains the common functionalities and properties, and make new classes for different payment modes inherit from this abstract class.
+```java
+public abstract class Payment {
+    // this is the "template" method that defines our order of actions
+    public void makePayment() {
+        verifyPaymentMethod();
+        executePayment();
+    }
+
+    // these abstract methods will have concrete implementations in the classes that inherit from "Payment" class
+    protected abstract void verifyPaymentMethod();
+    protected abstract void executePayment();
+}
+```
+
+
+➡️ Now let's make child classes from `Payment` class for different payment modes:
+```java
+public class CreditCardPayment extends Payment {
+
+    @Override
+    protected void verifyPaymentMethod() {
+        // Here goes the code for verifying the Credit Card
+        System.out.println("Credit Card verified.");
+    }
+
+    @Override
+    protected void executePayment() {
+        // Here goes the code for executing payment with the Credit Card
+        System.out.println("Payment successfully completed with credit card.");
+    }
+}
+```
+```java
+public class EWalletPayment extends Payment {
+
+    @Override
+    protected void verifyPaymentMethod() {
+        // Here goes the code for verifying the E-Wallet
+        System.out.println("E-Wallet verified");
+    }
+
+    @Override
+    protected void executePayment() {
+        // Here goes the code for executing payment with the E-Wallet
+        System.out.println("Payment successfully completed with E-Wallet");
+    }
+}
+```
+
+➡️ We have successfully implemented the **Template Method** pattern. Our driver code will now look like this:
+```java
+public class Main {
+    public static void main(String[] args) {
+        var payment1 = new CreditCardPayment();
+        var payment2 = new EWalletPayment();
+
+        payment1.makePayment();     // makes credit card payment
+        payment2.makePayment();     // // makes e-wallet payment
+    }
+}
+```
+
+
+
