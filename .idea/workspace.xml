@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d2a48827-5880-4320-8b60-e31566df9ed6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/Compressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/Compressor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/Filter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/GIFCompressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/GIFCompressor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/JPEGCompressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/JPEGCompressor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Design Patterns/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,8 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
