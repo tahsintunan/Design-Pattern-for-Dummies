@@ -13,12 +13,18 @@
 * Common language for communicating technically complex stuff
 
 ## List of the Original 23 Patterns:
-* Creational
-  * Abstract Factory
-  * Builder
-  * Factory Method
-  * Prototype
-  * Singleton
+* Behavioral
+  * [Memento](https://github.com/TahsinTunan/Design-Patterns-in-Java/blob/main/Design%20Patterns/Behavioral/Memento/Memento.md)
+  * [State](https://github.com/TahsinTunan/Design-Patterns-in-Java/blob/main/Design%20Patterns/Behavioral/State/State.md)
+  * [Iterator](https://github.com/TahsinTunan/Design-Patterns-in-Java/blob/main/Design%20Patterns/Behavioral/Iterator/Iterator.md)
+  * [Strategy](https://github.com/TahsinTunan/Design-Pattern-for-Dummies/blob/main/Design%20Patterns/Behavioral/Strategy/Strategy.md)
+  * [Template Method](https://github.com/TahsinTunan/Design-Pattern-for-Dummies/blob/main/Design%20Patterns/Behavioral/TemplateMethod/TemplateMethod.md)
+  * Command
+  * Observer
+  * Mediator
+  * Chain of Responsibility
+  * Visitor
+  * Interpreter
 * Structural
   * Adapter
   * Bridge
@@ -27,15 +33,9 @@
   * Facade
   * Flyweight
   * Proxy
-* Behavioral
-  * Chain of Responsibility
-  * Command
-  * Interpreter
-  * [Iterator](https://github.com/TahsinTunan/Design-Patterns-in-Java/blob/main/Design%20Patterns/Behavioral/Iterator/Iterator.md)
-  * Mediator
-  * [Memento](https://github.com/TahsinTunan/Design-Patterns-in-Java/blob/main/Design%20Patterns/Behavioral/Memento/Memento.md)
-  * Observer
-  * [State](https://github.com/TahsinTunan/Design-Patterns-in-Java/blob/main/Design%20Patterns/Behavioral/State/State.md)
-  * Strategy
-  * Template Method
-  * Visitor
+* Creational
+  * Abstract Factory
+  * Builder
+  * Factory Method
+  * Prototype
+  * Singleton
