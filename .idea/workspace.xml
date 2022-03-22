@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2a48827-5880-4320-8b60-e31566df9ed6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/Compressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/Compressor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/Filter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/GIFCompressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/GIFCompressor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/JPEGCompressor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Behavioral/Strategy/Code/JPEGCompressor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Design Patterns/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Design Patterns/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design-Patterns-in-Java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Design-Pattern-for-Dummies.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +37,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../java_apppp/hmmmm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -49,14 +46,14 @@
   <component name="RunManager" selected="Application.Main (1)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Design-Patterns-in-Java" />
+      <module name="Design-Pattern-for-Dummies" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Behavioral.State.Code.Main" />
-      <module name="Design-Patterns-in-Java" />
+      <module name="Design-Pattern-for-Dummies" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Behavioral.State.Code.*" />
@@ -69,21 +66,21 @@
     </configuration>
     <configuration name="MainTemplateMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MainTemplateMethod" />
-      <module name="Design-Patterns-in-Java" />
+      <module name="Design-Pattern-for-Dummies" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="bbb" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bbb" />
-      <module name="Design-Patterns-in-Java" />
+      <module name="Design-Pattern-for-Dummies" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="bro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bro" />
-      <module name="Design-Patterns-in-Java" />
+      <module name="Design-Pattern-for-Dummies" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
