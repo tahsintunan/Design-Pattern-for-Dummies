@@ -1,4 +1,4 @@
-# Design-Patterns-in-Java
+# Design Pattern for Dummies
 
 
 ## Topics covered _(with short explanation and code examples)_
